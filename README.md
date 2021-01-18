@@ -2,6 +2,10 @@
 
 A webpack plugin and loader for combining individual svg icons into a single svg sprite file, just like css image sprite.
 
+## Installation
+
+`npm install --save-dev @chaoyang805/svg-sprite-webpack-plugin`
+
 ## Fundamental
 
 This tool loads your svg icons into a single svg file containing several `<symbol>` nodes. Then you can refrence this svg icons via attribute `xlink:href="/img/icons.svg#icon-avatar"` in `<use>` node of the `<svg></svg>` tag. For example, assume you have these icons:
@@ -58,7 +62,7 @@ import iconAvatar from '@/assets/icon-avatar.svg' // iconAvatar = 'img/icons.svg
 
 ```javascript
 // webpack.config.js
-const SvgSpritePlugin = require('svg-sprite-webpack-plugin');
+const SvgSpritePlugin = require('@chaoyang805/svg-sprite-webpack-plugin');
 
 module.exports = {
   ...
@@ -89,7 +93,7 @@ If you are using vue-cli，create a vue.config.js file and add code:
 ```javascript
 // vue.config.js
 const path = require('path')
-const SvgSpritePlugin = require('svg-sprite-webpack-plugin');
+const SvgSpritePlugin = require('@chaoyang805/svg-sprite-webpack-plugin');
 module.exports = {
   ...,
   chainWebpack(config) {
